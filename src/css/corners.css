@@ -1,0 +1,31 @@
+.corner-top-right {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.corner-top-left {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  transform: scaleX(-1);
+}
+
+.corner-bottom-left {
+  position: absolute;
+  top: calc(100vh - 2rem);
+  left: 1rem;
+  transform: scale(-1);
+}
+
+.corner-bottom-right {
+  position: absolute;
+  top: calc(100vh - 2rem);
+  right: 1rem;
+  transform: scaleY(-1);
+}
+
+.corner-top-left line,
+.corner-bottom-left line {
+  stroke: var(--colour-title-red);
+}

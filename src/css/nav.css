@@ -1,0 +1,21 @@
+.nav-block {
+  position: fixed;
+}
+
+.nav-block ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-block li {
+  border-left: 8px solid rgba(255, 5, 5, 0);
+  padding-left: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.nav-block li:hover {
+  border-left: 8px solid rgba(255, 5, 5, 100);
+}

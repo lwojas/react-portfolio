@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+  --colour-title-red: #ff0a0a;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: url(../public/images/RobotPromo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.App,
+.home-block,
+.knowledge-block,
+#root {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+li,
+p {
+  color: var(--colour-title-red);
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+p {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+/* Homepage block */
+
+.home-block {
+  padding: 4rem;
+  position: relative;
+}
+
+/* Knowledge block - homepage */
+
+.knowledge-block {
+  background-color: var(--colour-title-red);
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-left: 5%;
+  display: flex;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #ff0101;
+  box-shadow: -20px 4px 30px 1px rgba(255, 3, 3, 0.25);
+}
+
+.knowledge-list,
+.knowledge-list > * {
+  /* position: relative; */
+  width: fit-content;
+}
+
+.knowledge-list {
+  padding: 2rem;
+}
+
+.knowledge-list li {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 0.8;
+  color: #000;
+  filter: blur(1.5px);
+  border-left: 8px solid rgba(0, 0, 0, 0);
+  padding-left: 0.6rem;
+  transition: all 0.2s ease;
+  animation: textflicker 0.4s linear infinite;
+}
+
+.knowledge-list li:hover {
+  border-left: 8px solid rgba(0, 0, 0, 1);
+}
+
+/* Text block */
+
+.text-block {
+  padding-top: 15%;
+  padding-left: 5%;
+  max-width: 40%;
+}
+
+/* Flex stuff */
+
+.flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.flex-center {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* justify-content: center; */
 }
 
-.App-link {
-  color: #61dafb;
+.flex-gap-large {
+  gap: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* margins */
+
+.margin-bottom-med {
+  margin-bottom: 2rem;
 }
